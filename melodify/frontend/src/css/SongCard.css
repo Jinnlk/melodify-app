@@ -1,0 +1,28 @@
+.song-card {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    width: 300px;
+    margin: 10px 0;
+}
+
+.song-thumbnail {
+    width: 50px;
+    height: 50px;
+    background-color: #555;
+    margin-right: 15px;
+}
+
+.song-info {
+    color: white;
+}
+
+.song-name {
+    font-weight: bold;
+}
+
+.song-artist {
+    font-size: 14px;
+    color: #aaa;
+}

@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+body {
+    background-color: #1c1c1c; 
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #1c1c1c;
+    min-height: 100vh;
+}
