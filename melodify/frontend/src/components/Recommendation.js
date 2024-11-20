@@ -16,6 +16,16 @@ function Recommendation() {
         }
     };
 
+    const handleSaveSong = async (song) => {
+        try {
+            await axios.post('/api/spotify/save', song);
+            alert(`${song.name} by ${song.artist} saved successfully!`);
+        } catch (error) {
+            console.error('Error saving song:', error.message);
+            alert('Failed to save the song.');
+        }
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         fetchRecommendations();
@@ -42,6 +52,12 @@ function Recommendation() {
                             <p className="song-name">{song.name}</p>
                             <p className="song-artist">By {song.artist}</p>
                         </div>
+                        <button
+                            className="save-button"
+                            onClick={() => handleSaveSong(song)}
+                        >
+                            Save
+                        </button>
                     </div>
                 ))}
             </div>
