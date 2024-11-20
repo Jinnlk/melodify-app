@@ -20,3 +20,89 @@ body {
     background-color: #1c1c1c;
     min-height: 100vh;
 }
+
+.recommendation-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #121212;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 70%;
+    border: 2px solid #6c63ff;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #443fb2;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.song-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.song-card {
+    display: flex;
+    align-items: center;
+    background-color: #282828;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.song-card:hover {
+    transform: scale(1.02);
+}
+
+.song-details {
+    text-align: left;
+    margin-left: 15px;
+}
+
+.song-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.song-artist {
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+

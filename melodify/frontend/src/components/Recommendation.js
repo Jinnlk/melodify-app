@@ -8,9 +8,7 @@ function Recommendation() {
     const fetchRecommendations = async () => {
         try {
             const response = await axios.get('/api/spotify/search', {
-                params: {
-                    q: query,
-                },
+                params: { q: query },
             });
             setSongs(response.data);
         } catch (error) {
@@ -24,7 +22,7 @@ function Recommendation() {
     };
 
     return (
-        <div>
+        <div className="recommendation-container">
             <h1>Insert a song to get started!</h1>
             <form onSubmit={handleSubmit}>
                 <input
@@ -32,17 +30,21 @@ function Recommendation() {
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Search for a song"
+                    className="search-input"
                 />
-                <button type="submit">Generate</button>
+                <button type="submit" className="search-button">Generate</button>
             </form>
             <h2>You might like these</h2>
-            <ul>
+            <div className="song-list">
                 {songs.map((song, index) => (
-                    <li key={index}>
-                        <strong>{song.name}</strong> by {song.artist}
-                    </li>
+                    <div key={index} className="song-card">
+                        <div className="song-details">
+                            <p className="song-name">{song.name}</p>
+                            <p className="song-artist">By {song.artist}</p>
+                        </div>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }
